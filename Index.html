@@ -1,1 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lista de tareas</title>
+</head>
+<body>
 
+<h2>Mis tareas</h2>
+
+<input id="tarea" placeholder="Escribe una tarea">
+<button onclick="agregar()">Agregar</button>
+
+<ul id="lista"></ul>
+
+<script>
+function agregar() {
+  let texto = document.getElementById("tarea").value;
+  let li = document.createElement("li");
+  li.innerHTML = texto + " <button onclick='this.parentNode.remove()'>X</button>";
+  document.getElementById("lista").appendChild(li);
+}
+</script>
+
+</body>
+</html>
